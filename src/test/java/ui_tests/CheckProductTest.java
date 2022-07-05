@@ -1,20 +1,20 @@
 package ui_tests;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
 import selenium.Actions.StartDriver;
 import selenium.Pages.MainPage;
 
-public class CheckProductCase {
+public class CheckProductTest {
     static WebDriver driver;
     private final String URL = "http://automationpractice.com/index.php";
 
     MainPage page;
 
-    @Before
+    @BeforeEach
     public void setup(){
         driver = StartDriver.initChromeDriver(URL);
         page = new MainPage(driver);
@@ -66,7 +66,7 @@ public class CheckProductCase {
                 .checkCartQuantityText("(empty)");
     }
 
-    @After
+    @AfterEach
     public void endTest(){
         driver.quit();
     }

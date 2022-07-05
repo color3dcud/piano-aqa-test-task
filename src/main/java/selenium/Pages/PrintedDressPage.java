@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PrintedDressPage extends MainPage{
 
@@ -54,13 +54,14 @@ public class PrintedDressPage extends MainPage{
     @FindBy(xpath = "//span[@title='Continue shopping']")
     private WebElement continueShoppingButton;
 
+    // TODO: Allure steps - PrintedDressPage
     public PrintedDressPage checkDataSheetFields(String field_1, String field_2, String field_3){
         assertEquals(field_1, this.compositionsField.getText());
         assertEquals(field_2, this.stylesField.getText());
         assertEquals(field_3, this.propertiesField.getText());
         return this;
     }
-
+    // TODO: assertAll for fields and values
     public PrintedDressPage checkDataSheetValues(String value_1, String value_2, String value_3){
         assertEquals(value_1, this.compositionsValue.getText());
         assertEquals(value_2, this.stylesValue.getText());

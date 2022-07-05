@@ -16,6 +16,7 @@ public class EveningDressesPage extends MainPage{
     @FindBy(xpath = "//a[@title='View'][1]")
     private WebElement moreButton;
 
+    // TODO: Allure steps - EveningDressesPage
     public EveningDressesPage hoverOnPrintedDress(){
         this.action
                 .moveToElement(printedDress)

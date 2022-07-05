@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CartPage extends MainPage{
 
@@ -18,6 +18,7 @@ public class CartPage extends MainPage{
     @FindBy(xpath = "//p[@class='alert alert-warning']")
     private WebElement emptyCartMessage;
 
+    // TODO: Allure steps - CartPage
     public CartPage clickDeleteButton(){
         deleteButton.click();
         pause(3000);

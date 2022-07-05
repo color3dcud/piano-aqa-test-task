@@ -6,7 +6,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class MainPage {
     protected final WebDriver driver;
@@ -18,10 +18,10 @@ public class MainPage {
         this.action = new Actions(driver);
     }
 
-    @FindBy(xpath = "//div[@id='block_top_menu']/ul/li[2]")
+    @FindBy(xpath = "//div[@id='block_top_menu']/ul/li[2]") // TODO: Change dressButton selector
     private WebElement dressesButton;
 
-    @FindBy(xpath = "//div[@id='block_top_menu']/ul/li[2]/ul/li[2]")
+    @FindBy(xpath = "//div[@id='block_top_menu']/ul/li[2]/ul/li[2]") // TODO: Change eveningDressButton selector
     private WebElement eveningDressesButton;
 
     @FindBy(xpath = "//div[@class='shopping_cart']/a")
@@ -38,7 +38,7 @@ public class MainPage {
         }
         return this;
     }
-
+    // TODO: Allure steps - MainPage
     public MainPage hoverOnDressesButton(){
         this.action
                 .moveToElement(dressesButton)
