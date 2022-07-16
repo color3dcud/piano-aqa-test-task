@@ -54,18 +54,21 @@ public class PrintedDressPage extends MainPage{
     @FindBy(xpath = "//span[@title='Continue shopping']")
     private WebElement continueShoppingButton;
 
-    // TODO: Allure steps - PrintedDressPage
-    public PrintedDressPage checkDataSheetFields(String field_1, String field_2, String field_3){
-        assertEquals(field_1, this.compositionsField.getText());
-        assertEquals(field_2, this.stylesField.getText());
-        assertEquals(field_3, this.propertiesField.getText());
+    public PrintedDressPage checkCompositionData(String compositionField, String compositionValue){
+        assertEquals(compositionField, this.compositionsField.getText());
+        assertEquals(compositionValue, this.compositionsValue.getText());
         return this;
     }
-    // TODO: assertAll for fields and values
-    public PrintedDressPage checkDataSheetValues(String value_1, String value_2, String value_3){
-        assertEquals(value_1, this.compositionsValue.getText());
-        assertEquals(value_2, this.stylesValue.getText());
-        assertEquals(value_3, this.propertiesValue.getText());
+
+    public PrintedDressPage checkStylesData(String stylesField, String stylesValue){
+        assertEquals(stylesField, this.stylesField.getText());
+        assertEquals(stylesValue, this.stylesValue.getText());
+        return this;
+    }
+
+    public PrintedDressPage checkPropertiesData(String propertiesField, String propertiesValue){
+        assertEquals(propertiesField, this.propertiesField.getText());
+        assertEquals(propertiesValue, this.propertiesValue.getText());
         return this;
     }
 

@@ -28,8 +28,9 @@ public class CheckProductTest {
                 .clickEveningDressesButton()
                 .hoverOnPrintedDress()
                 .clickMoreButton()
-                .checkDataSheetFields("Compositions", "Styles", "Properties")
-                .checkDataSheetValues("Viscose", "Dressy", "Short Dress");
+                .checkCompositionData("Compositions", "Viscose")
+                .checkStylesData("Styles", "Dressy")
+                .checkPropertiesData("Properties", "Short Dress");
     }
 
     @Test
